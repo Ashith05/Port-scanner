@@ -83,7 +83,7 @@ ul li a:hover::before {
 
 #profile-cards {
     width: 100%;
-    height: 100vh;
+    height: 89vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -150,3 +150,30 @@ ul li a:hover::before {
 }
 /* Profile Cards Ends Here */
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  .fx2-text.grey.small {
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .fx2-text.grey {
+    font-family: Gilroy,sans-serif;
+    color: #9b9b9b;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  .fx2-text {
+    line-height: 19px;
+  }
