@@ -1,49 +1,141 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<meta name="author" content="hipernes">
-<meta name="keywords" content="hipernes,JPS,javascript,port,scan,scanner">
-<meta name="description" content="javascript port scanner">
-<meta name="robots" content="all"><title>Port Scannner</title>
-<script type="text/javascript" src="index.js"></script>
-<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Network Scanner</title>
+    <script type="text/javascript" src="index.js"></script>
 </head>
-
 <body>
-<header>
-<div class="title"; align="center"><font size=10>Port scanner</font></div>
-<div class="title"; align="center"> Home</div>
-<div class="title"; align="center"> Help</div>
-</header>
-<br><br><br><br><br><br><br>
-<form id="boton">
-<button class="container" type="button" onclick="scanports();">Scan Ports</button><br><br><br>
-<button class="container" type="button" onclick="pinghost();">Ping Host</button><br><br><br>
-<button class="container" type="button" onclick="resetdata();">Reset</button><br><br><br>
-<button class="container" type="button" onclick="window.location.reload();">Reload</button>
-</form>
-<br>
-<br>
-<div align="center" id="line0"></div>
-<div align="center" id="line1"></div>
-<div align="center" id="networks"></div>
-<div align="center" id="line2"></div>
-<div align="center" id="line3"></div>
-<div id="info"> <span align="center" id="line4"></span> <span align="center" id="line5"></span></div>
-<div align="center" id="line6"></div>
-<div align="center" id="line7"></div>
-<footer>
-  <div class="fx2-text grey small">Copyright © 2022 "#ash 101" | All rights reserved |</div><br>
-    <div class="fx2-social-footer-div-icons centered">
-      <a href="https://facebook.com/" target="_blank" class="fx2-social-link-block w-inline-block">
-        <img src="https://global-uploads.webflow.com/5d9ee27d931ebcfda8f814d3/5eb9c081578713205194308c_Shape%20(1).svg" width="16" alt=""></a>
-      <a href="https://youtube.com/" target="_blank" class="fx2-social-link-block w-inline-block">
-        <img src="https://global-uploads.webflow.com/5d9ee27d931ebcfda8f814d3/5eb9c081692dda640af696bc_Shape%20(3).svg" width="30" alt=""></a>
-      <a href="https://instagram.com/" target="_blank" class="fx2-social-link-block w-inline-block">
-        <img src="https://global-uploads.webflow.com/5d9ee27d931ebcfda8f814d3/5eb9c081b1badcdac9fec389_instagram.svg" width="30" alt=""></a>
-      <a href="https://twitter.com/" target="_blank" class="fx2-social-link-block w-inline-block">
-        <img src="https://global-uploads.webflow.com/5d9ee27d931ebcfda8f814d3/5eb9c081657acc812001fade_Shape%20(2).svg" width="30" alt=""></a>
-      </div>
-  </footer>
+   <!-- Header -->
+   <header>
+       <div class="header">
+        <p>Network Scanner</p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#tools">Our Tools</a></li>
+            <li><a href="#content">Help</a></li>
+            <li><a href="About/about.html">About Us</a></li>
+            <li><a href="Contact Us/contactus.html">Contact Us</a></li>
+        </ul>
+       </div>
+   </header>
 
-</body></html>
+   <!-- Content -->
+   <div id="box">
+   </div>
+
+   <div id="tools">
+   <h1 align="center">Check out our Tools!</h1>
+      <br><br>
+      <button 
+         class="container" 
+         type="button" onclick="scanports();">Scan Ports
+      </button><br><br><br>
+      <button 
+         class="container" 
+         type="button" onclick="pinghost();">Ping Host
+      </button><br><br><br>
+      <button 
+         class="container" 
+         type="button" onclick="window.location.href = 'https://whatismyipaddress.com/';">Check your IP
+      </button><br><br><br>
+      <button 
+         class="container" 
+         type="button" onclick="window.location.href = 'https://mxtoolbox.com/DNSLookup.aspx';">DNS Lookup
+      </button><br><br><br>
+      <button 
+         class="container" 
+         type="button" onclick="window.location.href = 'https://mxtoolbox.com/ReverseLookup.aspx';">Reverse DNS
+      </button><br><br><br>
+      <button 
+         class="container" 
+         type="button" onclick="window.location.reload();">Reload
+      </button><br><br><br>
+   </div>
+   <br><br>
+   <div id="result">
+  <div align="center" id="line0"></div><br>
+  <div align="center" id="line1"></div>
+  <div align="center" id="networks"></div>
+  <div align="center" id="line2"></div><br>
+  <div align="center" id="line3"></div>
+  <div id="info"><span align="center" id="line4"></span> <span align="center" id="line5"></span></div>
+  <div align="center" id="line6"></div>
+  <div align="center" id="line7"></div>
+   </div>
+
+   <div id="content">
+   <h3 align="center"> ESSENTIAL INFORMATION </h3>
+   <h1 align="center">What You Need To Know</h1>
+      <p>
+         <p id="heading">What is a port?</p><br><span>
+         A port, referred to as a server port or Internet port, is a virtual point of network connection. Network ports are used for routing incoming information from a network to specific applications to a designated machine. They are software-based, each uniquely associated with a specific process or service. Therefore, computers are able to distinguish between different kinds of traffic. <br>
+         Hypothetically, for example, if you wanted to enable remote desktop on a Windows PC within your network, you'd need to make sure port 3389 was open and forwarding to the appropriate computer. <br>
+         Ports are all assigned a number and standardized across all network devices. There is an IP range for available IP addresses; similarly, between the User Datagram Protocol (UDP) ports and Transmission Control Protocol (TCP) ports, there are 65,536 ports open for communication. However, lower-number ports are most often used. <br>
+         In many cases, port numbers are reserved for specific protocols across all routers. For example, port 25 is reserved for SMTP (Simple Mail Transfer Protocol) across networks. Subsequently, this standardizes ports and port forwarding for all users.</span><br><br>
+      </p>
+      <p>
+         <p id="heading">What is an online port scanner?</p><br><span>
+         Also referred to as an open port scanner or IP port scanner, a port scanner is a free tool that displays which ports on a network are open for communication. Determining whether or not a port's open can help with setting up IP security cameras. Furthermore, it helps figure out if a network is secure. You can check on other network-related operations and network admin features with a port checker or port scan tool. <br>
+         Hackers also use port scanners to expose vulnerabilities in a network. For reasons like this, it's important for users to check their own ports for weaknesses and make sure they have a strong firewall established on their device. However, scanning for open ports on your own network is completely legal.
+         <br><br></span>
+      </p>
+      <p>
+         <p id="heading">Scan types!</p><br><span>
+         To begin and scan open ports on an IP, enter a valid IP address or URL at the top of the page. After that, you can scan ports on the IP/URL individually or in pre-made groups. <br><br>
+         1. To scan individually, select 'Individual,' input a valid port number, and select 'Scan.' The tool will display the status of the chosen port below the scan button. <br>
+         2. To scan by group type, select 'Group' and choose a group from the drop down menu. Ports contained in the group will then be displayed below the drop down. After confirming your selection, click 'Scan.' The tool will then display the status of each port in the group below the scan button. <br>
+         3. To scan by numeric range, select 'Range,' input a valid port number to start, input another valid port number to stop, and select 'Scan.' Subsequently, the tool will then display the status of each port between and including the starting and ending ports below the scan button. <br>
+         4. To scan by custom group, select 'Custom,' enter each desired port to scan on its own line in the text box shown, and select 'Scan.' The tool will then display the status of each inputted port below the scan button. <br>
+         If a port is displayed as open, that means it is open for remote communication. Otherwise, the port should be closed to remote communication. However, just because a port displays as closed through our tool doesn't mean that it is closed. You should always double-check your router configuration to be sure. You can also double-check with another port scanner online, like the Nmap port scanner.<br><br></span>
+      </p>
+      <p>
+         <p id="heading">How to get your port number</p><br><span>
+         To get your server's port numbers in order to let you access different sites and servers online, follow these steps for your computer. <br>
+         To get port numbers on Windows:
+         <br>
+         Start up the command prompt.<br>
+         1. Type ipconfig. <br>
+         2. Type netstat -a for a list of all port numbers.<br><br>
+         
+         To get port numbers on a Mac:<br>
+         1. Launch System Preferences.<br>
+         2. Go to Network.<br>
+         3. Click Advanced.<br>
+         4. Click the Port Scan tab.<br><br></span>
+      </p>
+      <p>
+         <p id="heading">Ping Host</p><br><span>
+            The ping command is a way to test whether a particular networked device, such as a computer or a website, is available and responding. It works by sending a small packet of data, called a "ping," to the device, and waiting for a response. If the device is online and working correctly, it will respond with a "pong" message, indicating that it has received the ping. This process can help you determine whether a device is having connectivity issues or if there is a problem with the network connection.</span><br><br>
+      </p>
+      <p>
+         <p id="heading">DNS Look Up</p><br><span>
+            DNS, or Domain Name System, is like a phone book for the internet. It helps match easy-to-remember website names (like www.google.com) to the numerical IP addresses (like 216.58.194.174) that computers use to locate websites. When you enter a website name into your web browser, your computer sends a request to a DNS server to look up the corresponding IP address. Once the server finds the IP address, it sends it back to your computer so it can connect to the website and load the page for you.</span><br><br>
+      </p>
+      <p>
+         <p id="heading">Reverse DNS Look Up</p><br><span>
+            Reverse DNS look up is a process used to find the hostname (the name of a computer or website) associated with a specific IP address. This is the opposite of a regular DNS look up, where you would enter a hostname to find the corresponding IP address. <br>
+            Imagine you're trying to send an email to someone, but the email is bouncing back because the recipient's server doesn't recognize your IP address. To fix this, you could use a reverse DNS look up to find the hostname associated with your IP address and add it to a list of trusted senders. This would allow your emails to be delivered to the recipient's inbox. <br>
+            In short, a reverse DNS look up is a way to find the name of a computer or website associated with a specific IP address. It can be useful for resolving email delivery issues or for identifying the source of a network connection.</span><br><br>
+      </p>
+   </div>
+   
+   <!-- Footer -->
+   <footer id="footer"><br>
+      <p align="center">
+         <b>Disclaimer:</b>
+         The information provided by this website's port scanner tool is for informational purposes only. <br><br>
+         Use of this tool is at your own risk.We do not endorse or condone unauthorized access to any network or system.
+      </p>
+      <p align="center">
+         Scrapping this website is not allowed. You will be temporarily banned if you make too many requests in an hour.
+      </p><br>
+      <p align="center" id="footer-bottom">
+         Copyright © 2023 Hash101 | Project under MIT Licence |
+      </p>
+   </footer>
+</body>
+</html>
