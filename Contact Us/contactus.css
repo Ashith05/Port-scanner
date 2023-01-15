@@ -292,3 +292,15 @@ button:hover
         font-size: 15px;
     }
 }
+
+/* Footer */
+#footer{
+    color: white;
+    background-color: #484848;
+    margin:0 0 10px;
+    padding:0 0 10px;
+    align-self: flex-end
+  }
+  #footer-bottom{
+    background-color: #28282d;
+  }
